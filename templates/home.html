@@ -23,7 +23,11 @@
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
         <h2 class="text-center mt-4 mb-4">Open Positions</h2>
-        <p>TODO - Show jops here</p>
+        <div>
+            {% for job in jobs %}
+                {% include 'jobs.html' %}
+            {% endfor %}
+        </div>
         <div class="text-center">
             <button class="mt-4 mb-4 btn btn-primary btn-lg">Contact Us</button>
             <p>Copyright 2024, Chibane</p>
