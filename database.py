@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 
 from sqlalchemy import create_engine, text
+from connect_string import connect_str
 
-engine = create_engine("mysql+pymysql://chibane:0516@172.19.176.187/careers?charset=utf8mb4")
+engine = create_engine(connect_str)
 
 def load_jobs_from_db():
   with engine.connect() as conn:
